@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar_responsive{
+    background-color: rgb(253, 253, 253);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+} 
+.navbar_responsive ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar_responsive li{
+    height: 50px;
+    position: relative;
+
+}
+.navbar_responsive a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: all 0.3s;
+} 
+.navbar_responsive ul a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 109, 235);
+}
+.navbar_responsive li:first-child{
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    
+    
+}
+.navbar_responsive .mob_sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.688);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.navbar_responsive .mob_sidebar li{
+    width: 100%;
+}
+.navbar_responsive .mob_sidebar a{
+    width: 100%;
+}
+.navbar_responsive .menu__button{
+    display: none;
+}
+.navbar_responsive .fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+.navbar_responsive ul li ul.Navbardropdown li{
+    display: block;
+
+}
+.navbar_responsive ul li ul.Navbardropdown{
+    width: 140%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.navbar_responsive ul li:hover ul.Navbardropdown{
+    display:block;
+    
+}
+.navbar_responsive img{
+    height: 80%;
+
+}
+  
+@media(max-width: 822px){
+    .navbar_responsive .hideOnMobile{
+        display: none;  
+    }
+    .navbar_responsive .menu__button{
+        display:block;
+    }
+}
+@media(max-width: 400px){
+    .navbar_responsive .mob_sidebar{
+        width: 100%;
+    }
+    
+}
